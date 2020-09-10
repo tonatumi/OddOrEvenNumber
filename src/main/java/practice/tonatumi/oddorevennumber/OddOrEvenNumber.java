@@ -20,9 +20,6 @@ public final class OddOrEvenNumber extends JavaPlugin {
     int time = 30;
     String prefix ="Odd or Even";
 
-    private OddOrEvenNumber plugin;
-
-
 
 
 
@@ -68,7 +65,7 @@ public final class OddOrEvenNumber extends JavaPlugin {
                 }
                 time --;
             }
-        }.runTaskTimer(plugin,0,20);
+        }.runTaskTimer(this,0,20);
     }
 
     public void end(){
