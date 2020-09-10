@@ -43,7 +43,7 @@ public final class OddOrEvenNumber extends JavaPlugin {
                     //賭け時間が1秒以上あって
                     if(time > 0){
                         //残り時間が10の倍数か5秒以下になったら表示。
-                        if(time%10==0 && time<=5){
+                        if(time%10==0 || time<=5){
                             Bukkit.getServer().broadcastMessage(prefix+":ダイスが振られるまであと"+time+"秒です。");
 
 
@@ -129,6 +129,7 @@ public final class OddOrEvenNumber extends JavaPlugin {
 
                 Bukkit.getServer().broadcastMessage(prefix+":"+p.getDisplayName() + "さんが新しく丁半を始めました。");
                 gameStats = true;
+                Bukkit.getServer().broadcastMessage("ゲーム開始、カウントダウンこれから");
                 countDown();
                 return true;
 
